@@ -1,0 +1,56 @@
+<nav></nav>
+
+<header>
+
+  <div id="menu-bar" class="fas fa-bars"></div>
+
+  <a href="#" class="logo">travel<span>B</span>y</a>
+
+  <nav class="navbar">
+      <a href="/adminchoice">Back</a>
+
+  </nav>
+
+  <div class="icons">
+      <i class="fas fa-search" id="search-btn"></i>
+      <i class="fas fa-user" id="login-btn"></i>
+  </div>
+
+  <form action="" class="search-bar-container">
+      <input type="search" id="search-bar" placeholder="search here...">
+      <label for="search-bar" class="fas fa-search"></label>
+  </form>
+
+</header>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1 class="heading">
+    <span>A</span>
+    <span>G</span>
+    <span>E</span>
+    <span>N</span>
+    <span>C</span>
+    <span>Y</span>
+</h1>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="row g-3">
+                <div *ngFor="let i of data" class="col col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+                  <div class="card" style="width: 30rem;">
+                    <div class="card-body">
+                      <h5 class="card-title">Agency &nbsp;&nbsp;: &nbsp;&nbsp;{{i.agency}}</h5>
+                      <h5 class="card-title">Agent Name &nbsp;:&nbsp;&nbsp;{{i.agentname}}</h5>
+                      <h5 class="card-title">Email&nbsp;:&nbsp;&nbsp;{{i.email}}</h5>
+                      <h5 class="card-title">Phone&nbsp;:&nbsp;&nbsp;{{i.contactnumber}}</h5>
+                    </div>
+                  </div>
+                        </div>
+                      </div>
+                </div>
+    </div>
+</div>

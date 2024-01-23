@@ -1,0 +1,200 @@
+<header>
+
+    <div id="menu-bar" class="fas fa-bars"></div>
+
+    <a href="#" class="logo">travel<span>B</span>y</a>
+
+    <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+        <a routerLink="/login">Login</a>
+        <a routerLink="/signin">Signup</a>
+       
+        <a routerLink="/admin">Admin</a>
+        <a href="/tagent">Travel Agent</a>
+    </nav>
+
+    <div class="icons">
+        <i class="fas fa-search" id="search-btn"></i>
+        <i class="fas fa-user" id="login-btn"></i>
+    </div>
+
+    <form action="" class="search-bar-container">
+        <input type="search" id="search-bar" placeholder="search here...">
+        <label for="search-bar" class="fas fa-search"></label>
+    </form>
+
+</header>
+
+<section class="home" id="home">
+
+
+    <div class="content">
+        <h3>You're off to Great Places!</h3>
+        <p>Dicover new places with us, adventure awaits</p>
+        
+    </div>
+
+    <div class="video-container" >
+        <video src="../../assets/video/bg1.mp4" id="video-slider" loop autoplay muted></video>
+    </div>
+
+
+
+  
+
+   </section>
+
+   <section class="gallery" id="gallery">
+
+    <h1 class="heading">
+        <span>G</span>
+        <span>a</span>
+        <span>l</span>
+        <span>l</span>
+        <span>e</span>
+        <span>r</span>
+        <span>y</span>
+    </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8a2VyYWxhfGVufDB8fDB8fA%3D%3D&w=1000&q=80" alt="">
+            <div class="content">
+                <h3>Allepey Houseboat</h3>
+                <p>The Venice of the East, Alleppey, is known for its scenic charms and the lovely natural aura..</p>
+                
+            </div>
+        </div>
+        <div class="box">
+            <img src="https://cdn1.goibibo.com/voy_ing/t_fs/thiruvananthapuram-agasthyarkoodam-peak-149268059265o.jpeg" alt="">
+            <div class="content">
+                <h3>Agasthyakoodam</h3>
+                <p>Agasthyakoodam is nature’s ode to bird watchers. One of the highest peaks in Kerala, it has long been known as a bird watcher’s paradise.</p>
+                
+            </div>
+        </div>
+        <div class="box">
+            <img src="https://res.cloudinary.com/thrillophilia/image/upload/c_fill,f_auto,fl_progressive.strip_profile,g_auto,h_600,q_auto,w_auto/v1/filestore/ijuuu7e223zxpsjdmlkohgqxv2q7_Kochi%20park%20Recoil.jpg" alt="">
+            <div class="content">
+                <h3>Wonderla</h3>
+                <p>Choose your dose of fun and get started, for an unforgettable day lies ahead! That's right, the sky is the limit at Wonderla Kochi and the amusement is ceaseless!.</p>
+               
+            </div>
+        </div>
+        <div class="box">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/13_kannara_bridge_near_shencottah.jpeg" alt="">
+            <div class="content">
+                <h3>Thenmala</h3>
+                <p>It is home to the first eco-tourism centre in India. The word 'Thenmala' means "'Honey hills" in Malayalam language. .</p>
+                
+            </div>
+        </div>
+        <div class="box">
+            <img src="https://images.herzindagi.info/image/2022/May/mystery-behind-padmanabhaswamy-temple_g.jpg" alt="">
+            <div class="content">
+                <h3>Sree Padmanabhaswamy Temple</h3>
+                <p>The name of the city of 'Thiruvananthapuram' in Tamil and Malayalam translates to "The City of Lord Ananta", (The City Of Lord Vishnu) referring to the main deity of the temple.</p>
+                
+            </div>
+        </div>
+        <div class="box">
+            <img src="https://www.keralatourism.org/images/destination/large/lighthouse_beach_kovalam20131031110741_432_1.jpg" alt="">
+            <div class="content">
+                <h3>Kovalam</h3>
+                <p>Kovalam is an internationally renowned beach with three adjacent crescent beaches. </p>                
+            </div>
+        </div>
+        <div class="box">
+            <img src="https://images.newindianexpress.com/uploads/user/imagelibrary/2019/7/6/w900X450/LITTLE.jpg?w=400&dpr=2.6" alt="">
+            <div class="content">
+                <h3>Kalipara</h3>
+                <p>It is one of those rare places where you can watch the sunset and the sunrise in their full glory. It also houses an ancient temple – the SreeKaliparaLokambika .</p>
+                
+            </div>
+        </div>
+        <div class="box">
+            <img src="https://en-media.thebetterindia.com/uploads/2015/12/jatayu_f.png" alt="">
+            <div class="content">
+                <h3>Jatayupara</h3>
+                <p>The world’s largest bird sculpture and within it a rock theme park for adventure enthusiasts is what today pays tribute to the mythical bird from the Indian epic Ramayana – Jatayu..</p>
+                
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="contact" id="contact">
+    
+    <h1 class="heading">
+        <span>C</span>
+        <span>o</span>
+        <span>n</span>
+        <span>t</span>
+        <span>a</span>
+        <span>c</span>
+        <span>t</span>
+    </h1>
+
+    <div align="center" class="row">
+
+
+        <form #signins="ngForm" (ngSubmit)="addfeedback()">
+            <div class="inputBox">
+                <input type="text" [(ngModel)]="contact.name" name="name" placeholder="name">
+                <input type="email" [(ngModel)]="contact.email" name="email" placeholder="email">
+            </div>
+            <div class="inputBox">
+                <input type="number" [(ngModel)]="contact.number" name="number" placeholder="number">
+                <input type="text" [(ngModel)]="contact.subject" name="subject" placeholder="subject">
+            </div>
+            <textarea placeholder="message" [(ngModel)]="contact.message" name="message" id="" cols="30" rows="10"></textarea>
+            <input type="submit" class="btn" value="send message">
+        </form>
+
+    </div>
+    
+</section>
+
+
+
+
+
+
+<!-- footer section  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>About Us</h3>
+            <p>Newly developed, faster systems for travel enthusiasts.</p>
+        </div>
+        <div class="box">
+            <h3>Branch Locations</h3>
+            <a href="#">India</a>
+        </div>
+        <div class="box">
+            <h3>Quick Links</h3>
+            <a href="#">home</a>
+            <a href="#">gallery</a>
+            <a href="#">review</a>
+            <a href="#">contact</a>
+        </div>
+        <div class="box">
+            <h3>Follow Us</h3>
+            <a href="#">facebook</a>
+            <a href="#">instagram</a>
+            <a href="#">twitter</a>
+            <a href="#">linkedin</a>
+        </div>
+
+    </div>
+
+</section>

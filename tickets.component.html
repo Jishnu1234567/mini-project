@@ -1,0 +1,54 @@
+<header>
+
+  <div id="menu-bar" class="fas fa-bars"></div>
+<a href="#" class="logo">travel<span>B</span>y</a>
+
+  <nav class="navbar">
+      <a href="/navbar">Back</a>
+
+  </nav>
+
+  <div class="icons">
+      <i class="fas fa-search" id="search-btn"></i>
+      <i class="fas fa-user" id="login-btn"></i>
+  </div>
+
+  <form action="" class="search-bar-container">
+      <input type="search" id="search-bar" placeholder="search here...">
+      <label for="search-bar" class="fas fa-search"></label>
+  </form>
+
+</header>
+<br>
+<br>
+<br>
+<br>
+<br> 
+<div class="container">
+  <div class="row">
+      <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <div class="row g-3">
+              <div *ngFor="let i of data" class="col col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+                <div class="card" style="width: 30rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">indate &nbsp;&nbsp;: &nbsp;&nbsp;{{i.indate}}</h5>
+                    <h5 class="card-title">outdate &nbsp;:&nbsp;&nbsp;{{i.outdate}}</h5>
+                    <h5 class="card-title">Packageid&nbsp;:&nbsp;&nbsp;{{i.packageid}}</h5>
+                    <h5 class="card-title">username&nbsp;:&nbsp;&nbsp;{{i.username}}</h5>
+                    <h5 class="card-title">Count&nbsp;:&nbsp;&nbsp;{{i.count}}</h5>
+
+
+                   
+                      </div>
+                      <div *ngIf="!i.isEdit">
+                        <table class="g-3">
+                          <tr>
+                            
+                            <td><button class="btn btn-danger"  (click)="Deletebook(i)">Cancel</button></td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+              </div>
+  </div>
+</div>

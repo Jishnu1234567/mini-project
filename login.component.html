@@ -1,0 +1,33 @@
+<nav></nav>
+
+<div class="container">
+   
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+          
+            <section class="login" id="login">
+                <div class="login-form-container">
+                   
+                    
+                   
+                
+                    <i class="fas fa-times" id="form-close"></i>
+                
+                    <form #signins="ngForm" (ngSubmit)="addlogin()">
+                        
+
+
+                       
+                        
+                        <h3>Login</h3>
+                        <input type="email" class="box" placeholder="Username" [(ngModel)]="signin.username" name="username">
+                        <input type="password" class="box" placeholder="Password" name="password" [(ngModel)]="signin.password">
+                        <button class="btn">Login</button>
+                        <a routerLink="/">Go back</a>
+                    </form>
+                
+                </div>
+                </section>
+        </div>
+    </div>
+</div>

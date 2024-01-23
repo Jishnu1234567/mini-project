@@ -1,0 +1,33 @@
+<nav></nav>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <section class="booking" id="booking">
+                <div class="booking-form-container">
+                
+                    <i class="fas fa-times" id="form-close"></i>
+                
+                    <form #signins="ngForm" (ngSubmit)="addbooking()">
+                        <h3>Book your Destination</h3>
+                        
+                        
+                        <br>
+
+                        <input type="date" class="box" [(ngModel)]="bookingform.indate" placeholder="check in date" name="indate">
+                        <input type="date" class="box" [(ngModel)]="bookingform.outdate" placeholder="check out date" name="outdate">
+                        <input type="text" class="box" [(ngModel)]="bookingform.username" placeholder="username" name="username">
+                       <input type="text" class="box" [(ngModel)]="bookingform.packageid" placeholder="packageid" name="packageid">
+                        <input type="number" class="box" [(ngModel)]="bookingform.count" placeholder="count" name="count">
+                       
+                        <input type="submit" value="book now" class="btn">
+                        
+                        
+                    </form>
+                
+                </div>
+                </section>
+        </div>
+    </div>
+</div>

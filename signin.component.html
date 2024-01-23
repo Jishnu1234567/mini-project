@@ -1,0 +1,29 @@
+<nav></nav>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <section class="signin" id="signin">
+                <div class="signin-form-container">
+                
+                    <i class="fas fa-times" id="form-close"></i>
+                
+                    <form #signins="ngForm" (ngSubmit)="adduser()">
+                        <h3>Sign up</h3>
+                        <input type="text" class="box" name="username" [(ngModel)]="signin.username" placeholder="enter your username">
+                        <input type="number" class="box" name="age" [(ngModel)]="signin.age" placeholder="enter your age">
+                        
+                        <input type="number" class="box" name="contactnumber" [(ngModel)]="signin.contactnumber" placeholder="enter your contact number">
+                        <input type="email" class="box" name="email" [(ngModel)]="signin.email" placeholder="enter your email">
+                        <input type="password" class="box" name="password" [(ngModel)]="signin.password" placeholder="enter your password">
+                        <input type="submit" value="sign in now" class="btn">
+                        <a routerLink="/">Go back</a>
+                        
+                        
+                    </form>
+                
+                </div>
+                </section>
+        </div>
+    </div>
+</div>
+

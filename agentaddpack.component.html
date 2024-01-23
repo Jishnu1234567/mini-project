@@ -1,0 +1,80 @@
+
+<header>
+
+    <div id="menu-bar" class="fas fa-bars"></div>
+  
+    <a href="#" class="logo">travel<span>B</span>y</a>
+  
+    <nav class="navbar">
+        <a href="/tagenthome">Back</a>
+  
+    </nav>
+  
+    <div class="icons">
+        <i class="fas fa-search" id="search-btn"></i>
+        <i class="fas fa-user" id="login-btn"></i>
+    </div>
+  
+    <form action="" class="search-bar-container">
+        <input type="search" id="search-bar" placeholder="search here...">
+        <label for="search-bar" class="fas fa-search"></label>
+    </form>
+  
+  </header>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+<section class="addpackages" id="addpackages">
+  
+    <h1 class="heading">
+        <span>A</span>
+        <span>d</span>
+        <span>d</span>
+        <span>P</span>
+        <span>a</span>
+        <span>c</span>
+        <span>k</span>
+        <span>a</span>
+        <span>g</span>
+        <span>e</span>
+        <span>s</span>
+    </h1>
+    <div class="container m-3" >
+   
+        <div class="row">
+
+            </div>
+            <div class="container mt-3">
+                <div class="row">
+                    <div class="col-md-4" >
+                        <form #packagess="ngForm" (ngSubmit)="addpackages()">
+                        <form action="/action_page.php">
+                            
+                          </form>
+                          <div class="mb-3">
+                            <input type="text" placeholder="Agency/Admin"  [(ngModel)]="packages.agency" name="agency" class="form-control">
+                          </div>
+                          <div class="mb-3">
+                            <input type="text" placeholder="Place" class="form-control" [(ngModel)]="packages.place" name="place">
+                        </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" [(ngModel)]="packages.packagename" name="packagename"  placeholder="Package Name">
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" [(ngModel)]="packages.packageid" name="packageid" placeholder="Packageid">
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" [(ngModel)]="packages.packagedetails" name="packagedetails" placeholder="Package Details">
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" [(ngModel)]="packages.price" name="price" placeholder="Price">
+                            </div>
+                            <div class="mb-3">
+                                <input type="submit" class="btn btn-danger btn-sm form-control" value="Create">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>

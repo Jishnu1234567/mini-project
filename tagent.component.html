@@ -1,0 +1,116 @@
+<header>
+
+    <div id="menu-bar" class="fas fa-bars"></div>
+
+    <a href="#" class="logo">travel<span>B</span>y</a>
+
+    <nav class="navbar">
+        <a href="#signup">Signup</a>
+        <a href="#login">Login</a>
+        <a href="/">Go back</a>
+    </nav>
+
+    <div class="icons">
+        <i class="fas fa-search" id="search-btn"></i>
+        <i class="fas fa-user" id="login-btn"></i>
+    </div>
+
+    <form action="" class="search-bar-container">
+        <input type="search" id="search-bar" placeholder="search here...">
+        <label for="search-bar" class="fas fa-search"></label>
+    </form>
+
+</header>
+
+<section class="home" id="home">
+
+
+    <div class="content">
+        <h3>Add Exciting Packages!</h3>
+        
+    </div>
+
+    <div class="video-container" >
+        <video src="../../assets/video/bg.mp4" id="video-slider" loop autoplay muted></video>
+    </div>
+
+
+
+  
+
+   </section>
+
+   <section class="signup" id="signup">
+
+    <h1 class="heading">
+        <span>S</span>
+        <span>i</span>
+        <span>g</span>
+        <span>n</span>
+        <span>u</span>
+        <span>p</span>
+    </h1>
+    <div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <section class="signup" id="signup">    
+                <div class="signin-form-container">
+                
+                    <i class="fas fa-times" id="form-close"></i>
+                
+                    <form #travelagents="ngForm" (ngSubmit)="addtravelagent()">
+                        <h3>Sign up</h3>
+                        <input type="text" class="box" name="agentname" [(ngModel)]="travelagent.agentname" placeholder="Agent name">
+                        
+                        <input type="text" class="box" name="agency" [(ngModel)]="travelagent.agency" placeholder="Agency">
+                        <input type="number" class="box" name="contactnumber" [(ngModel)]="travelagent.contactnumber" placeholder="Contact number">
+                        <input type="email" class="box" name="email" [(ngModel)]="travelagent.email" placeholder="Email">
+                        <input type="password" class="box" name="password" [(ngModel)]="travelagent.password" placeholder="Password">
+                        <input type="submit" value="Sign up" class="btn">
+                        
+                        
+                    </form>
+                
+                </div>
+                </section>
+        </div>
+    </div>
+</div>
+<h1 class="heading">
+    <span>L</span>
+    <span>o</span>
+    <span>g</span>
+    <span>i</span>
+    <span>n</span>
+</h1>
+<div class="container">
+   
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+          
+            <section class="login" id="login">
+                <div class="login-form-container">
+                   
+                    
+                   
+                
+                    <i class="fas fa-times" id="form-close"></i>
+                
+                    <form #travelagents="ngForm" (ngSubmit)="agentlogin()">
+                        
+
+
+                       
+                        
+                        <h3>Login</h3>
+                        <input type="email" class="box" placeholder="Email" [(ngModel)]="travelagent.email" name="email">
+                        <input type="agency" class="box" placeholder="Agency" [(ngModel)]="travelagent.agency" name="agency">
+                        <input type="password" class="box" placeholder="Password" [(ngModel)]="travelagent.password" name="password">
+                        <button class="btn">Login</button>
+                    </form>
+                
+                </div>
+                </section>
+        </div>
+    </div>
+</div>

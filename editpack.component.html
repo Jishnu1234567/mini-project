@@ -1,0 +1,127 @@
+<header>
+
+  <div id="menu-bar" class="fas fa-bars"></div>
+
+  <a href="#" class="logo">travel<span>B</span>y</a>
+
+  <nav class="navbar">
+      <a href="/adminchoice">Back</a>
+
+  </nav>
+
+  <div class="icons">
+      <i class="fas fa-search" id="search-btn"></i>
+      <i class="fas fa-user" id="login-btn"></i>
+  </div>
+
+  <form action="" class="search-bar-container">
+      <input type="search" id="search-bar" placeholder="search here...">
+      <label for="search-bar" class="fas fa-search"></label>
+  </form>
+
+</header>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<div class="container">
+  <div class="row">
+      <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+          <table class="table table-dark table-sm" >
+              <thead>
+                  <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Place</th>
+                    <th scope="col">Pkg Name</th>
+                    <th scope="col">Agency/Admin</th>
+                    <th scope="col">Details</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Actions</th>
+                    
+                  </tr>
+                </thead>
+                <tbody  >
+                  <tr *ngFor="let i of data">
+                    <th scope="row">
+                      <div *ngIf="i.isEdit">
+                        <input type="text" name="packageid" class="form-control" [(ngModel)]="i.packageid">
+                      </div>
+                      <div *ngIf="!i.isEdit">
+                        {{i.packageid}}
+                      </div>
+                    </th>
+
+                    <td>
+                      <div *ngIf="i.isEdit">
+                        <input type="text" name="place" class="form-control" [(ngModel)]="i.place"  >
+                      </div>
+                      <div *ngIf="!i.isEdit">
+                        {{i.place}}
+                      </div>
+                    </td>
+
+                    <td>
+                      <div *ngIf="i.isEdit">
+                        <input type="text" name="Pkg name" class="form-control" [(ngModel)]="i.packagename">
+                      </div>
+                      <div *ngIf="!i.isEdit">
+                        {{i.packagename}}
+                      </div>
+                    </td>
+                    <td>
+                      <div *ngIf="i.isEdit">
+                        <input type="text" name="Pkg name" class="form-control" [(ngModel)]="i.agency">
+                      </div>
+                      <div *ngIf="!i.isEdit">
+                        {{i.agency}}
+                      </div>
+                    </td>
+                    <td>
+                      <div *ngIf="i.isEdit">
+                        <input type="text" name="Details" class="form-control" [(ngModel)]="i.packagedetails"  >
+                      </div>
+                      <div *ngIf="!i.isEdit">
+                        {{i.packagedetails}}
+                      </div>
+                    </td>
+                    <td>
+                      <div *ngIf="i.isEdit">
+                        <input type="text" name="price" class="form-control" [(ngModel)]="i.price"  >
+                      </div>
+                      <div *ngIf="!i.isEdit">
+                        {{i.price}}
+                      </div>
+                    </td>
+                    
+                    <td>
+                      <div *ngIf="!i.isEdit">
+                        <table class="g-3">
+                          <tr>
+                            <td><button class="btn btn-primary" (click)="onEdit(i)">Edit</button></td>
+                            &nbsp;
+                            <td><button class="btn btn-danger"  (click)="Deletepackage(i)">Delete</button></td>
+                          </tr>
+                        </table>
+                      </div>
+                      <div *ngIf="i.isEdit">
+                        <table class="g-3">
+                          <tr>
+                            <td><button class="btn btn-primary" (click)="Updatepackage(i)">Save</button></td>
+                            &nbsp;
+                            <td> <button class="btn btn-danger" (click)="i.isEdit = false">Cancel</button></td>
+                          </tr>
+                        </table>
+                      </div>
+                      
+                    
+                    </td>
+                    
+                  </tr>
+                </tbody>
+            </table>
+      </div>
+      </div>

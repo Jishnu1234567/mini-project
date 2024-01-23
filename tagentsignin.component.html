@@ -1,0 +1,28 @@
+<nav></nav>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <section class="signin" id="signin">
+                <div class="signin-form-container">
+                
+                    <i class="fas fa-times" id="form-close"></i>
+                
+                    <form #travelagents="ngForm" (ngSubmit)="addtravelagent()">
+                        <h3>Sign up</h3>
+                        <input type="text" class="box" name="agentname" [(ngModel)]="travelagent.agentname" placeholder="Agent name">
+                        
+                        <input type="text" class="box" name="agency" [(ngModel)]="travelagent.agency" placeholder="Agency">
+                        <input type="number" class="box" name="contactnumber" [(ngModel)]="travelagent.contactnumber" placeholder="CContact number">
+                        <input type="email" class="box" name="email" [(ngModel)]="travelagent.email" placeholder="Email">
+                        <input type="password" class="box" name="password" [(ngModel)]="travelagent.password" placeholder="Password">
+                        <input type="submit" value="sign up now" class="btn">
+                        
+                        
+                    </form>
+                
+                </div>
+                </section>
+        </div>
+    </div>
+</div>
+

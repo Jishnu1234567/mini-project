@@ -1,0 +1,32 @@
+<nav></nav>
+
+<div class="container">
+   
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+          
+            <section class="admin" id="admin">
+                <div class="admin-form-container">
+                   
+                    
+                   
+                
+                    <i class="fas fa-times" id="form-close"></i>
+                
+                    <form #admins="ngForm" (ngSubmit)="adminlogin()">
+                        
+
+
+                       
+                        
+                        <h3><strong>Admin Login</strong></h3>
+                        <input type="ID" class="box" placeholder="Id" [(ngModel)]="admin.username" name="username">
+                        <input type="Password" class="box" placeholder="Password" name="password" [(ngModel)]="admin.password">
+                        <button class="btn">Login</button>
+                        <a routerLink="/">Go back</a>
+                    </form>
+                
+                </div>
+                </section>
+        </div>
+    </div>
